@@ -2,6 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+<<<<<<< Updated upstream
         VStack(spacing: 16) {
             Image(systemName: "globe")
                 .imageScale(.large)
@@ -12,6 +13,9 @@ struct ContentView: View {
             Text("My name is Fat Shady")
         }
         .padding()
+=======
+        PlacesScene()
+>>>>>>> Stashed changes
     }
 }
 
