@@ -1,10 +1,3 @@
-//
-//  PlacesRow.swift
-//  DevAcademy
-//
-//  Created by Michal Wagner on 25.07.2023.
-//
-
 import SwiftUI
 
 struct PlacesRow: View {
@@ -37,6 +30,6 @@ struct PlacesRow: View {
 
 struct PlacesRow_Previews: PreviewProvider {
     static var previews: some View {
-        PlacesRow(feature: Features.mock.feature[0])
+        PlacesRow(feature: Feature.mock[0])
     }
 }

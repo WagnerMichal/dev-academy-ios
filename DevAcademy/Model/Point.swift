@@ -1,8 +1,6 @@
-//
-//  Point.swift
-//  DevAcademy
-//
-//  Created by Michal Wagner on 25.07.2023.
-//
-
 import Foundation
+
+struct Point{
+    let latitude: Float
+    let longtitude: Float
+}

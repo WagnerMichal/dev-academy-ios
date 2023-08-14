@@ -4,7 +4,7 @@ import SwiftUI
 struct DevAcademyApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().inject(objects: ObservableObjects(services: Services()), coordinator: Coordinator())
         }
     }
 }

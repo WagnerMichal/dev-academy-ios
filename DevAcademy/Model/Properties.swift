@@ -1,8 +1,8 @@
-//
-//  Properties.swift
-//  DevAcademy
-//
-//  Created by Michal Wagner on 25.07.2023.
-//
-
 import Foundation
+
+struct Properties{
+    let ogcFid: Int
+    let obrId: URL
+    let druh: PossibleKind
+    let nazev: String
+}
