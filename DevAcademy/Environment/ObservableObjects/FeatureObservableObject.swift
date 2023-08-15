@@ -6,12 +6,13 @@ final class FeaturesObservableObject: ObservableObject {
     private let dataService: DataService = DataService.shared
     
     func fetchPlaces() {
-        DataService.shared.fetchData{ result in
+        DataService.shared.fetchData { result in
             switch result {
             case .success(let features):
                 self.features = features
             case .failure(let error):
                 print(error)
             }
-        }    }
+        }
+    }
 }

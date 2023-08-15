@@ -1,6 +1,6 @@
 import Foundation
 
-struct Feature: Equatable{
+struct Feature: Equatable {
     static func == (lhs: Feature, rhs: Feature) -> Bool {
         lhs.properties.ogcFid == rhs.properties.ogcFid
     }

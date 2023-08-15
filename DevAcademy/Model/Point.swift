@@ -1,6 +1,6 @@
 import Foundation
 
-struct Point{
+struct Point {
     let latitude: Float
     let longtitude: Float
 }

@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct PlacesDetailViewState: DynamicProperty{
+struct PlacesDetailViewState: DynamicProperty {
     private let feature : Feature
     
     init(feature: Feature) {

@@ -4,7 +4,7 @@ struct PlacesRow: View {
     let feature: Feature
     var body: some View {
         HStack{
-            AsyncImage(url: feature.properties.obrId){
+            AsyncImage(url: feature.properties.obrId) {
                 image in
                 image
                     .resizable()
@@ -15,7 +15,7 @@ struct PlacesRow: View {
             } placeholder: {
                 ProgressView()
             }
-            VStack(alignment: .leading){
+            VStack(alignment: .leading) {
                 Text(feature.properties.nazev)
                     .font(.title2)
                     .fontWeight(.semibold)

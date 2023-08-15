@@ -5,7 +5,7 @@ struct PlacesScene: View {
     @EnvironmentObject private var coordinator: Coordinator
     let state = PlacesViewState()
     var body: some View {
-        NavigationStack{
+        NavigationStack {
             Group{
                 if state.featuresLoaded{
                     List(state.features, id: \.properties.ogcFid) {
@@ -38,23 +38,10 @@ struct PlacesScene: View {
                 .presentationDetents([.medium, .large])
         }
     }
-//    func onButtonTapped(){
-//        showFavorites = true
-//    }
-//    func fetch(){
-//        DataService.shared.fetchData{ result in
-//            switch result {
-//            case .success(let features):
-//                self.features = features.feature
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-//    }
 }
 
-//struct PlacesScene_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PlacesScene()
-//    }
-//}
+struct PlacesScene_Previews: PreviewProvider {
+    static var previews: some View {
+        PlacesScene().injectPreviewsEnvironment()
+    }
+}

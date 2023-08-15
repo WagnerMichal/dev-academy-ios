@@ -1,9 +1,9 @@
 import Foundation
 
 enum PossibleKind: RawRepresentable {
-    var rawValue: String{
-        get{
-            switch self{
+    var rawValue: String {
+        get {
+            switch self {
             case .kind(let raw):
                 return raw.rawValue
             case .unknown(let string):
@@ -11,11 +11,11 @@ enum PossibleKind: RawRepresentable {
             }
         }
     }
-    init?(rawValue: String){
-        if let p = Kind(rawValue: rawValue){
+    init?(rawValue: String) {
+        if let p = Kind(rawValue: rawValue) {
             self = .kind(p)
         }
-        else{
+        else {
             self = .unknown(rawValue)
         }
     }

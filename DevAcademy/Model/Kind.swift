@@ -1,6 +1,6 @@
 import Foundation
 
-enum Kind: String{
+enum Kind: String {
     case divadlo = "Divadlo"
     case galerie = "Galerie"
     case hub = "Hub"

@@ -1,6 +1,6 @@
 import Foundation
 
-struct Properties{
+struct Properties {
     let ogcFid: Int
     let obrId: URL
     let druh: PossibleKind

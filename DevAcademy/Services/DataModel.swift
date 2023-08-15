@@ -1,12 +1,12 @@
 import Foundation
 
-class DataService{
+class DataService {
     
     var data: Result<[Feature], Error>?
     static let shared = DataService()
-    private init(){}
+    private init() {}
     
-    func fetchData(_ handle: @escaping(Result<[Feature], Error>) -> Void){
+    func fetchData(_ handle: @escaping(Result<[Feature], Error>) -> Void) {
         if let data = data {
             handle(data)
             return
@@ -19,6 +19,6 @@ class DataService{
     }
     
 }
-extension DataService{
+extension DataService {
     private static var mockData: [Feature] = Feature.mock
 }
