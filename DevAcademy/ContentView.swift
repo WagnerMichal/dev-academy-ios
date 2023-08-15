@@ -1,17 +1,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject private var coordinator: Coordinator
     var body: some View {
-        VStack(spacing: 16) {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hi!")
-            Text("My name is.. (what?)")
-            Text("My name is.. (who?)")
-            Text("My name is Fat Shady")
-        }
-        .padding()
+        coordinator.featureScene
     }
 }
 
