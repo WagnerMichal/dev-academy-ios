@@ -2,17 +2,19 @@ import Foundation
 
 final class FeaturesObservableObject: ObservableObject {
     @Published var features: [Feature] = []
+    private let featuresService: FeaturesService
     
-    private let dataService: DataService = DataService.shared
+    init(featuresService: FeaturesService) {
+        self.featuresService = featuresService
+    }
     
-    func fetchPlaces() {
-        DataService.shared.fetchData { result in
-            switch result {
-            case .success(let features):
-                self.features = features
-            case .failure(let error):
-                print(error)
-            }
+    @MainActor
+    func fetchFeaturesWithAsync() async {
+        do {
+            let featuresResult = try await featuresService.featuresWithAsync()
+            self.features = featuresResult.features
+        } catch {
+            print(error)
         }
     }
 }
