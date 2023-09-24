@@ -1,6 +1,9 @@
-import Foundation
-
-struct Point {
-    let latitude: Float
-    let longtitude: Float
+struct Point: Decodable {
+    var latitude: Double
+    var longitude: Double
+    
+    enum CodingKeys: String, CodingKey {
+        case latitude = "y"
+        case longitude = "x"
+    }
 }

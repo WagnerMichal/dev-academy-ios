@@ -2,15 +2,15 @@ import SwiftUI
 
 final class Coordinator: ObservableObject {
 
-    var featureScene: some View {
-        PlacesScene()
+    var featuresScene: some View {
+        FeaturesView()
     }
 
     func featureDetailScene(with feature: Feature) -> some View {
-        PlaceDetailView(state: PlacesDetailViewState(feature: feature))
+        FeatureDetailView(state: FeatureDetailViewState(feature: feature))
     }
     
     var favoritesScene: some View {
-        Text("Zatím tady nic není")
+        Text("Nothing here yet")
     }
 }

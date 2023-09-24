@@ -12,7 +12,7 @@ final class ObservableObjects {
 
 extension ObservableObjects {
     convenience init(services: Services) {
-        let features = FeaturesObservableObject()
+        let features = FeaturesObservableObject(featuresService: services.featuresService)
         
         self.init(
             features: features

@@ -1,5 +1,3 @@
-import Foundation
-
 enum Kind: String {
     case divadlo = "Divadlo"
     case galerie = "Galerie"

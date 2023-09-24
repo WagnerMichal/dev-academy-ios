@@ -1,6 +1,6 @@
 import Foundation
 
-enum PossibleKind: RawRepresentable {
+enum PossibleKind: RawRepresentable, Decodable {
     var rawValue: String {
         get {
             switch self {
